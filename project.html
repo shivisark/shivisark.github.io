@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects – Shivangi</title>
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<link rel="stylesheet" href="mobile.css" />
+<style>html 
+{  .zoom-on-hover {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.zoom-on-hover:hover {
+  transform: scale(1.05);
+} 
+scroll-behavior: smooth;
+}
+
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: radial-gradient(ellipse at center, #fbeee8 0%, #f8d9c3 100%);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -3;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.6;
+      z-index: -2;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .blob1 {
+      width: 400px;
+      height: 400px;
+      background: #fce8ec;
+      top: -100px;
+      left: -100px;
+    }
+
+    .blob2 {
+      width: 300px;
+      height: 300px;
+      background: #f9f5dc;
+      top: 200px;
+      right: -150px;
+    }
+
+    .blob3 {
+      width: 500px;
+      height: 500px;
+      background: #e6fff3;
+      bottom: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 60px; /* Optional cap to help constrain height */
+}
+.monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 16px; /* balanced for a 36px circle */
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  color: #1c1c1c;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+  }
+
+ nav a {
+    color: #1c1c1c;
+    text-decoration: none;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+  header {
+  text-align: center;
+  padding: 24px 20px 12px;
+  margin-top: 0; /* Add this if not present */
+}
+
+h1 {
+  font-size: 32px; /* Match this to about.html if different */
+  font-weight: 500;
+  margin: 0;
+  padding-top: 8px;
+}
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .project-card p {
+      font-size: 15px;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav>
+  <a href="index.html" class="monogram">SS</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About</a>
+    <a href="project.html">Projects</a>
+    <a href="resume.pdf" rel="noopener noreferrer" target="_blank">Resume</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.linkedin.com/in/shivangi-sarkar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+</nav>
+<!-- Page Header -->
+<header>
+<h1>My Projects</h1>
+<p style="font-size: 16px; color: #555;">A closer look at the work I've done.</p>
+</header>
+<!-- Projects Grid -->
+<div class="projects-container">
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="heatmap.jpg" alt="Project 1" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+      <h3 style="text-align: center; color: #1c1c1c;">Differential Gene Expression Analysis in Breast Cancer (TCGA-BRCA)</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="dhfecg.jpg" alt="Project 2" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+      <h3 style="text-align: center; color: #1c1c1c;">Automated DHF Generator — Wearable ECG Patch</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="appliedproject.jpg" alt="Project 3" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+      <h3 style="text-align: center; color: #1c1c1c;">Effects of Air Quality on Cognitive and Motor Scores</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="Flowsyncreport.jpg" alt="Project 4" style="width: 64.5%; border-radius: 12px; margin-bottom: 12px; margin-left: 58px; display: block;" />
+      <h3 style="text-align: center; color: #1c1c1c;">FlowSync: Personalized Menstrual and Hormonal Health Tracker</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="heartml.jpg" alt="Project 5" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+<h3 style="text-align: center; color: #1c1c1c;">Heart Disease Prediction Using Machine Learning</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="project4.jpg" alt="Project 6" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+      <h3 style="text-align: center; color: #1c1c1c;">Blood-Brain Barrier-on-a-Chip to Study Curcumin’s Therapeutic Effects on Traumatic Brain Injury (TBI)</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="Barrett.jpg" alt="Project 7" style="width: 50%; border-radius: 12px; margin-bottom: 12px; margin-left: 90px;" />
+      <h3 style="text-align: center; color: #1c1c1c;">Honors Thesis: Socio-Cultural Review of Cancer Across Different Continents</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="capstone.jpg" alt="Project 8" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+      <h3 style="text-align: center; color: #1c1c1c;">Thermoelectric Brain Hypothermia Device</h3>
+    </div>
+  </a>
+</div>
+<section id="slideshow" style="padding: 80px 24px; scroll-margin-top: 100px;">
+<div class="glass" id="project-detail" style="max-width: 800px; margin: 0 auto; text-align: center;">
+<h2 id="detail-title">Select a project above</h2>
+<div id="detail-image-container" style="margin-top: 20px;"></div>
+<p id="detail-description" style="margin-top: 20px; font-size: 16px; color: #444;"></p>
+</div>
+</section>
+<script>
+  const projectData = {
+
+    1: {
+  title: "Differential Gene Expression Analysis in Breast Cancer (TCGA-BRCA)",
+  image: "heatmap.jpg",
+  description: `
+    <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <h3>Overview</h3>
+        <p>This project investigates the molecular differences between normal and cancerous breast tissue using RNA-Seq data from The Cancer Genome Atlas (TCGA-BRCA). By comparing expression profiles from 113 matched tumor-normal samples, the goal was to identify key biomarkers and therapeutic targets in breast cancer.</p>
+
+        <h3>Tools & Technologies</h3>
+        <ul style="font-size: 15px;">
+          <li>R</li>
+          <li>TCGAbiolinks</li>
+          <li>DESeq2</li>
+          <li>biomaRt</li>
+          <li>ggplot2</li>
+          <li>pheatmap</li>
+          <li>EnhancedVolcano</li>
+        </ul>
+
+        <h3>Key Steps</h3>
+        <ul style="font-size: 15px;">
+          <li>Queried and processed TCGA-BRCA RNA-Seq data</li>
+          <li>Filtered and normalized gene expression</li>
+          <li>Conducted differential expression analysis using DESeq2</li>
+          <li>Visualized results via PCA plots, heatmaps, and dendrograms</li>
+        </ul>
+
+        <h3>Results Highlights</h3>
+        <ul style="font-size: 15px;">
+          <li>Clear separation in PCA between tumor and normal tissue (PC1: 36%, PC2: 17%)</li>
+          <li>Top genes: TSPAN6, TNMD, CFTR</li>
+          <li>Clustering showed possible functional relationships between genes</li>
+        </ul>
+
+        <h3>Biological Insights</h3>
+        <ul style="font-size: 15px;">
+          <li>TSPAN6 downregulation may impair B cell recruitment to the tumor</li>
+          <li>TNMD downregulation correlated with poorer survival in some subtypes</li>
+          <li>CFTR dysfunction may influence estrogen-linked cancer progression</li>
+        </ul>
+
+        <h3>Impact</h3>
+        <ul style="font-size: 15px;">
+          <li>Highlighted potential biomarkers for early detection</li>
+          <li>Demonstrated skills in bioinformatics and biological interpretation</li>
+          <li>Supported future research in therapeutic target identification</li>
+        </ul>
+
+
+        
+        </p>
+      </div>
+
+      <div style="flex: 1; min-width: 300px;">
+        <h3>Visualizations</h3>
+<a href="PCA.jpg" target="_blank">
+  <img src="PCA.jpg" alt="PCA Plot: Tumor vs Normal" class="zoom-on-hover" style="width: 100%; border-radius: 12px; margin-bottom: 20px;" />
+</a>
+
+<a href="dendogram.jpg" target="_blank">
+  <img src="dendogram.jpg" alt="Dendrogram of Top Genes" class="zoom-on-hover" style="width: 100%; border-radius: 12px; margin-bottom: 20px;" />
+</a>
+
+
+<h3>View Full Report</h3>
+        <a href="Differential Gene Expression Analysis in Breast Cancer (TCGA-BRCA).pdf" target="_blank" style="display: inline-block;">
+          <button style="padding: 10px 20px; font-weight: bold; border-radius: 8px; border: none; background-color: #f0f0f0; cursor: pointer;">
+            Open PDF Report
+          </button>
+        </a>
+
+        <h3>Project Code</h3>
+        <p>
+          <a href="https://github.com/shivisark/Differential-Gene-Expression-Analysis-in-Breast-Cancer"
+             target="_blank"
+             style="font-weight: bold; font-size: 16px; text-decoration: underline;">
+            View GitHub Repository
+          </a>
+        </p>
+
+      </div>
+    </div>
+  `
+}
+
+,
+    
+    2: {
+  title: "Automated DHF Generator for Wearable ECG Patch",
+  image: "dhfecg.jpg",
+  description: `
+    <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <h3>Overview</h3>
+        <p>Developed an automated Design History File (DHF) generator for a Class II Wearable ECG Patch used in remote cardiac monitoring. The project integrates biomedical design principles with Python-based automation to streamline FDA-compliant documentation.</p>
+
+        <h3>Key Features</h3>
+        <ul style="font-size: 15px;">
+          <li><strong>User-Centric Design:</strong> Defined full user needs, design inputs/outputs, and verification methods.</li>
+          <li><strong>Traceability Matrix:</strong> Auto-generated matrix links user needs → inputs → outputs → tests with full backward traceability logic.</li>
+          <li><strong>Risk Management:</strong> Embedded FMEA logic for calculating Risk Priority Numbers (RPNs) and suggesting mitigations.</li>
+          <li><strong>FDA-Ready Format:</strong> Outputs audit-ready DHF reports with structured sections aligned to design control standards. </li>
+        </ul>
+
+        <h3>Impact</h3>
+        <ul style="font-size: 15px;">
+          <li>Reduced documentation time by using automation</li>
+          <li>Enhanced design traceability and usability testing tracking</li>
+          <li>Demonstrated cross-functional expertise in biomedical design, quality systems, and software development</li>
+        </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 300px;">
+        <h3>See Design History File </h3>
+        <a href="DHF_Report.pdf" target="_blank" style="display: inline-block; margin-bottom: 20px;">
+          <img src="dhf.jpg" alt="Click to view full DHF Report PDF" class="zoom-on-hover" style="width: 100%; max-width: 300px; border-radius: 12px;" />
+        </a>
+
+        <h3>Project Code</h3>
+        <p>
+          <a href="https://github.com/shivisark/AutomatedDHFGenerator"
+             target="_blank"
+             style="font-weight: bold; font-size: 16px; color: #1c1c1c; text-decoration: underline;">
+            🔗 View GitHub Repository
+          </a>
+        </p>
+      </div>
+    </div>
+  `
+},
+
+    3: {
+      title: "Effects of Air Quality on Cognitive and Motor Scores",
+      image: "appliedproject.jpg",
+      description: `
+        <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+          <div style="flex: 1; min-width: 300px;">
+            <h3>Overview</h3>
+            <p>This study investigates how chronic exposure to fine particulate matter (PM2.5) influences human motor and cognitive performance. Using a nationally distributed online motor task called “Super G,” the performance of 1,397 participants was assessed in relation to PM2.5 levels collected near their zip codes. Participants exposed to higher PM2.5 levels showed significantly less improvement in the task, suggesting that air pollution impairs neurocognitive function and may contribute to diseases such as Parkinson’s and Alzheimer’s.</p>
+
+            <h3>Methodology</h3>
+            <ul style="font-size: 15px;">
+              <li><strong>Participant Recruitment and Ethics:</strong> 1,397 participants recruited via MTurk with informed consent. IRB approved (ASU, Study ID: 00015247).</li>
+              <li><strong>Super G Motor Task:</strong> Online game with 75 trials assessing motor skill. Goal: land an astronaut on planets. Metrics: planets landed, response time, accuracy, position, etc.</li>
+              <li><strong>Zip Code & Geolocation:</strong> Mapped to nearest EPA site using geospatial calculations.</li>
+              <li><strong>Air Quality Data:</strong> EPA PM2.5/AQI data (2022–2024). Mean values by location.</li>
+              <li><strong>PM2.5 Exposure Grouping:</strong> High/low groups and quartiles (1Q to 4Q).</li>
+              <li><strong>Data Analysis and Visualization:</strong> R, dplyr, tidyverse. Visuals via ggplot2 (lines, boxes, histograms, maps).</li>
+            </ul>
+          </div>
+          <div style="flex: 1; min-width: 300px;">
+            <h3>See Full Report</h3>
+  <a href="FinalReport.pdf" target="_blank" style="display: inline-block; margin-bottom: 20px;">
+  <img src="FinalReport1.jpg" alt="Click to view full report PDF" class="zoom-on-hover" style="width: 100%; max-width: 300px; border-radius: 12px;" />
+</a>
+<p>
+ <h3>Project Video</h3>
+        <p>
+          <a href="https://capstones.engineering.asu.edu/project/assess-the-impact-of-air-quality-on-individual-cognition-and-motor-capability/"
+             target="_blank"
+             style="font-weight: bold; font-size: 16px; color: #1c1c1c; text-decoration: underline;">
+            🔗 Watch the Capstone Project Video
+          </a>
+        </p>
+</p>
+
+          </div>
+        </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px;">
+  <!-- Figure 7 -->
+  <div style="flex: 1; min-width: 300px;">
+    <h3>Figure 7: Impact of PM2.5 Exposure on Motor Learning Performance Over Time</h3>
+    <a href="figure7.png" target="_blank" style="display: inline-block;">
+      <img src="figure7.png" alt="Figure 7" class="zoom-on-hover" style="width: 100%; border-radius: 12px;" />
+    </a>
+    <p style="font-size: 15px; color: #444;">
+      This figure illustrates the performance trends in the Super G motor task for two groups: participants with low PM2.5 exposure (blue line) and those with high exposure (red line). Over time, the low-exposure group demonstrated steady improvement in task performance, indicative of effective motor learning. In contrast, the high-exposure group showed no significant improvement, suggesting that chronic exposure to fine particulate matter may inhibit neurocognitive learning.
+    </p>
+  </div>
+  <!-- Figure 8 -->
+  <div style="flex: 1; min-width: 300px;">
+    <h3>Figure 8: Distribution of Participants by PM2.5 Exposure Quartiles from Baseline to Year 2</h3>
+    <a href="figure8.png" target="_blank" style="display: inline-block;">
+      <img src="figure8.png" alt="Figure 8" class="zoom-on-hover" style="width: 100%; border-radius: 12px;" />
+    </a>
+    <p style="font-size: 15px; color: #444;">
+      This box plot shows how participants were distributed across four levels of PM2.5 exposure—low (1Q), low-medium (2Q), medium (3Q), and high (4Q)—at baseline and again at year 2. At baseline, a larger proportion of participants were in the medium to high exposure categories. By year 2, the distribution shifted, with fewer participants in the highest exposure quartile. This trend suggests a reduction in environmental PM2.5 levels or a demographic shift in the sample over time.
+    </p>
+  </div>
+</div>
+      `
+    },
+    4: {
+  title: "FlowSync: Personalized Menstrual and Hormonal Health Tracker",
+  image: "",
+description: `
+  <div style="margin-bottom: 30px;">
+    <h3>View Project Report</h3>
+    <a href="Flowsync.pdf" target="_blank" style="display: inline-block;">
+      <img src="Flowsyncreport.jpg" alt="FlowSync Report Preview" class="zoom-on-hover" style="width: 100%; max-width: 300px; border-radius: 12px;" />
+    </a>
+  </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <h3>Concept & Problem Statement</h3>
+        <p>FlowSync aims to fill a critical gap in women’s health by providing a smart, adaptive period and hormonal health tracker. Unlike existing apps, FlowSync caters to those with irregular cycles and hormonal disorders like PCOS, PMDD, and PMS by using data from both user input and wearable devices.</p>
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <h3>Features</h3>
+        <ul style="font-size: 15px; line-height: 1.8;">
+          <li>Predictive Analytics</li>
+          <li>Wearable Integration (HRV, skin conductance, temperature)</li>
+          <li>Personalized Cycle Tracking</li>
+          <li>Inclusive Symptom Logging</li>
+          <li>Lifestyle Recommendations</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="text-align: center;">Human-Centered Approach</h3>
+<div style="display: flex; justify-content: center;">
+  <ul style="font-size: 15px; line-height: 1.8; list-style-type: disc; list-style-position: inside; text-align: left;">
+    <li style="margin-bottom: 10px;">Surveys & Interviews</li>
+    <li style="margin-bottom: 10px;">Iterative Prototyping</li>
+    <li style="margin-bottom: 10px;">AI Modeling (Time Series & Deep Learning)</li>
+    <li>Expert Validation (Healthcare Professionals)</li>
+  </ul>
+</div>
+
+    </div>
+
+    <div style="margin-top: 40px;">
+      <h3>Personal Growth & Future Goals</h3>
+      <p style="font-size: 15px;">
+        Working on FlowSync sparked a deep interest in health-focused app development and wearable tech. I became passionate about using data science and design thinking to improve real lives. In the future, I aspire to develop applications that work in sync with smart wearables to address other underserved health issues.
+      </p>
+      <p style="font-size: 15px;">
+        This project marked the beginning of my journey into mobile health tech—and I’m excited to build more.
+      </p>
+    </div>
+  `
+}, 5: {
+  title: "Heart Disease Prediction Using Machine Learning",
+  image: "",
+  description: `
+  <div style="margin-bottom: 30px;">
+    <h3>View Project Report</h3>
+    <a href="python.pdf" target="_blank" style="text-decoration: none;">
+      <img src="python.jpg" alt="Heart Disease ML Report Preview"
+           class="zoom-on-hover"
+           style="width: 90%; max-width: 240px; border-radius: 12px; display: block; margin: 0 auto;" />
+    </a>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <h3>Overview</h3>
+    <p>As part of a machine learning course project, I developed a predictive model to aid physicians in identifying patients at risk of heart disease using real-world clinical data. The goal was to evaluate various ML algorithms for their prediction accuracy and interpretability.</p>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <h3>Techniques Used</h3>
+    <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+      <li>Exploratory Data Analysis: Correlation and covariance matrices to understand feature relationships.</li>
+      <li>Feature Engineering: Analyzed variables like chest pain type, max heart rate, and thalassemia.</li>
+      <li>Machine Learning Models:
+         <!-- Model Types Table -->
+<table style="width: 100%; max-width: 600px; margin: 0 auto; font-size: 15px; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;">Model</th>
+      <th style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding: 10px; text-align: center;">Perceptron</td><td style="padding: 10px; text-align: center;">Linear Classifier</td></tr>
+    <tr><td style="padding: 10px; text-align: center;">Logistic Regression</td><td style="padding: 10px; text-align: center;">Linear Classifier</td></tr>
+    <tr><td style="padding: 10px; text-align: center;">Decision Tree</td><td style="padding: 10px; text-align: center;">Tree-based</td></tr>
+    <tr><td style="padding: 10px; text-align: center;">Random Forest</td><td style="padding: 10px; text-align: center;">Ensemble (Bagging)</td></tr>
+    <tr><td style="padding: 10px; text-align: center;">SVM (Poly Kernel)</td><td style="padding: 10px; text-align: center;">Nonlinear Kernel</td></tr>
+    <tr><td style="padding: 10px; text-align: center;">K-Nearest Neighbor (KNN)</td><td style="padding: 10px; text-align: center;">Instance-Based</td></tr>
+  </tbody>
+</table>
+      </li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 30px;">
+    
+
+<!-- Accuracy Results Table -->
+<div style="margin-top: 40px;">
+  <h3 style="text-align: center; font-size: 20px;">Results</h3>
+  <table style="width: 100%; max-width: 500px; margin: 0 auto; font-size: 15px; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;">Model</th>
+        <th style="padding: 10px; text-align: center; border-bottom: 1px solid #ccc;">Accuracy</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding: 10px; text-align: center;">Perceptron</td><td style="padding: 10px; text-align: center;">57.41%</td></tr>
+      <tr><td style="padding: 10px; text-align: center;">Logistic Regression</td><td style="padding: 10px; text-align: center;">90.74%</td></tr>
+      <tr><td style="padding: 10px; text-align: center;">SVM (Poly Kernel)</td><td style="padding: 10px; text-align: center;">74.07%</td></tr>
+      <tr><td style="padding: 10px; text-align: center;">Decision Tree</td><td style="padding: 10px; text-align: center;">81.48%</td></tr>
+      <tr><td style="padding: 10px; text-align: center;">Random Forest</td><td style="padding: 10px; text-align: center;">92.59%</td></tr>
+      <tr><td style="padding: 10px; text-align: center;">K-Nearest Neighbor</td><td style="padding: 10px; text-align: center;">70.37%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+  <div style="margin-top: 30px;">
+    <h3>Best Model</h3>
+    <p>Random Forest, which reduced overfitting and delivered the highest accuracy at 92.59%, making it the most reliable for this dataset.</p>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <h3>Insights Gained</h3>
+    <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+      <li>Importance of feature correlation in model performance</li>
+      <li>Model tuning (e.g., best k in KNN, max_depth in Decision Tree)</li>
+      <li>Real-world healthcare applications of supervised learning</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 30px;">
+    <h3>Tools Used</h3>
+    <p>Python, Scikit-learn, Pandas, Matplotlib</p>
+  </div>
+
+  `
+}, 6: {
+  title: "TBI on a BBB Chip: Investigating Curcumin as a Therapeutic Treatment",
+  image: "",
+  description: `
+    <div style="margin-bottom: 30px;">
+      <h3>View Project Slides</h3>
+      <a href="TBIonaBBBChip.pdf" target="_blank" style="text-decoration: none;">
+        <img src="TBIBBB.jpg" alt="TBI Project Report Preview"
+             class="zoom-on-hover"
+             style="width: 90%; max-width: 240px; border-radius: 12px; display: block; margin: 0 auto;" />
+      </a>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>What is this project about?</h3>
+      <p>This project models traumatic brain injury (TBI) on a microfluidic "brain-on-a-chip" device to better understand how the brain responds to injury—and how it might respond to treatment with curcumin, a natural compound found in turmeric.</p>
+      <p>TBI is a serious condition that can result from accidents, sports injuries, or explosions. Despite how common it is, we still don’t have a cure. This chip lets us zoom in on the blood-brain barrier (BBB)—a critical defense system for the brain—and see what happens when it's damaged, then treated.</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>What did we build?</h3>
+      <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+        <li>Engineered a microfluidic device mimicking the human BBB using astrocytes, pericytes, and endothelial cells.</li>
+        <li>Recreated primary injury using laser-induced shock wave.</li>
+        <li>Simulated secondary injury using inflammatory cytokines.</li>
+        <li>Flowed curcumin through the chip using microfluidic pumps to test therapeutic effect.</li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>How did we test it?</h3>
+      <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+        <li>Measured TEER (transendothelial electrical resistance) for cell junction integrity.</li>
+        <li>Performed a permeability assay with fluorescent dye to assess barrier leakiness.</li>
+        <li>Analyzed gene expression to observe curcumin's anti-inflammatory and antioxidant effects.</li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>Why Curcumin?</h3>
+      <p>Curcumin is a plant-based compound known for its anti-inflammatory and antioxidant benefits. Past animal studies suggested it could help with TBI, but we wanted to test its effect on human brain cells in a more controlled, observable environment. Our BBB chip let us do exactly that!</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>Impact</h3>
+      <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+        <li>Advance drug testing for brain injuries without relying solely on animal models.</li>
+        <li>Provide a personalized medicine platform in the future using patient-specific cells.</li>
+        <li>Help researchers design better treatments for TBI, stroke, Alzheimer’s, and other brain disorders involving the BBB.</li>
+      </ul>
+    </div>
+  `
+}, 7: {
+  title: "Honors Thesis: Socio-Cultural Review of Cancer Across Different Continents",
+  image: "",
+  description: `
+    <div style="margin-top: 30px;">
+      <p><strong>Institution:</strong> Barrett, The Honors College at Arizona State University</p>
+      <p><strong>Author:</strong> Shivangi Sarkar</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>Project Summary</h3>
+      <p>This project is a comprehensive research thesis that explores how sociocultural beliefs and stigmas surrounding cancer differ across the world—and how those beliefs impact early diagnosis, treatment access, and patient outcomes. The paper compares cultural perceptions in South Asia, China, the Middle East, Europe, the USA, and Native American communities, highlighting patterns of shame, fear, blame, and medical mistrust.</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>Why This Matters</h3>
+      <p>Many public health strategies assume medical solutions alone are enough. But what if patients don’t seek help due to cultural shame or fear of being ostracized? This project reveals how deep-rooted societal perceptions—from religious interpretations to gender taboos—play a significant role in cancer mortality.</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>Key Findings</h3>
+      <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+        <li><strong>South Asia:</strong> High stigma due to religious and gender-based taboos; women fear losing marriage prospects.</li>
+        <li><strong>China:</strong> Self-stigma and body image issues impact cancer disclosure, despite advancements in TCM and modern healthcare.</li>
+        <li><strong>Middle East:</strong> Religious coping mechanisms help, but patriarchy and modesty norms restrict access for women.</li>
+        <li><strong>Western World:</strong> While more open, media metaphors (“battle cancer”) create pressure and self-blame.</li>
+        <li><strong>Native American Populations:</strong> Historical trauma fuels mistrust in the healthcare system, especially for women with cervical cancer.</li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>Impact</h3>
+      <p>This project showed how misinformation, cultural taboos, and structural inequalities hinder early cancer detection.</p>
+      <p>It proposed tailored solutions like education campaigns, community-based screening, culturally sensitive medical training, and reform of media language around cancer.</p>
+    </div>
+
+<div style="margin-top: 30px; text-align: center;">
+  <a href="https://hdl.handle.net/2286/R.2.N.185540" target="_blank"
+     style="font-size: 16px; font-weight: bold; color: #1c1c1c; text-decoration: underline;">
+    🔗 View My Publication
+  </a>
+</div>
+
+  `
+}, 8: {
+  title: "Thermoelectric Brain Hypothermia Device",
+  image: "",
+  description: `
+  <div style="font-size: 20px; margin-bottom: 20px; text-align: center;">
+  <a href="capstone.jpg" target="_blank" style="display: inline-block;">
+    <img src="capstone.jpg" alt="Capstone Brain Cooling Device"
+         class="zoom-on-hover"
+         style="width: 100%; max-width: 400px; border-radius: 12px; display: block; margin: 0 auto;" />
+  </a>
+</div>
+
+    <div style="margin-top: 20px;">
+      <p style="font-size: 15px; text-align: center;">
+        <strong>Capstone Project | Spring 2023 | Arizona State University x Barrow Neurological Institute</strong><br/>
+        Team of 5 | Role: Biological & Clinical Researcher
+      </p>
+    </div>
+
+    <div style="font-size: 15px; margin-top: 30px;">
+      <h3>Objective</h3>
+      <p>Designed and developed a non-invasive brain cooling device using thermoelectric Peltier technology to mitigate traumatic brain injury (TBI)-induced brain damage through controlled hypothermia.</p>
+    </div>
+
+    <div style="font-size: 20px; margin-top: 30px;">
+      <h3> Technical Contributions & Project Highlights</h3>
+      <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+        <li> Designed a targeted hypothermia system using Peltier devices to cool the brain and carotid arteries via a custom-fitted head and neck brace.</li>
+        <li> Built a SolidWorks 3D prototype, including components like:
+          <ul>
+            <li>Neck brace for carotid artery targeting</li>
+            <li>Water block for conductive cooling</li>
+            <li>Heatsink and fan integration for thermal dissipation</li>
+            <li>Modeled and refined each part using boss extrude, fillet, and cut functions</li>
+          </ul>
+        </li>
+        <li> Simulated heat transfer and brain thermodynamics using COMSOL Multiphysics:
+          <ul>
+            <li>Created layered heat transfer models through scalp, skull, dura, and brain tissue</li>
+            <li>Compared conduction-only vs. convection-enhanced designs</li>
+            <li>Validated experimental data against virtual models</li>
+          </ul>
+        </li>
+        <li> Built and tested physical prototypes using:
+          <ul>
+            <li>TEC1 Peltier modules</li>
+            <li>Water pump + aluminum water block for efficient heat removal</li>
+            <li>DS18B20 temperature sensors + Arduino Uno for real-time monitoring</li>
+            <li>Magnetically stirred convection systems to boost performance</li>
+          </ul>
+        </li>
+        <li> Conducted experimental trials:
+          <ul>
+            <li>Measured temperature drop in 250 mL water with and without convection</li>
+            <li>Identified optimal voltage/current to stabilize Peltier surface at 4°C</li>
+            <li>Analyzed temperature profiles over time and across configurations</li>
+          </ul>
+        </li>
+        <li> Managed Design Master Record (DMR) and tracked material specifications, measurements, and changes across iterations</li>
+        <li> Incorporated FDA-aligned regulatory processes:
+          <ul>
+            <li>Wrote and followed Standard Operating Procedures (SOPs)</li>
+            <li>Researched ISO and ASTM standards relevant to Class II/III medical devices</li>
+            <li>Outlined 510(k) clearance pathway for future commercialization</li>
+          </ul>
+        </li>
+        <li> Researched biological & clinical feasibility:
+          <ul>
+            <li>Investigated thermoregulation and brain-cooling mechanisms across species</li>
+            <li>Explored patient safety risks (e.g., choking, data privacy)</li>
+            <li>Evaluated ethical, practical, and cost-related constraints of real-world use</li>
+          </ul>
+        </li>
+        <li> Presented at Capstone Symposium with a digital poster and interactive demo, showcasing both virtual simulations and physical test results</li>
+      </ul>
+    </div>
+  `
+}
+
+
+  };
+
+  document.querySelectorAll(".project-card").forEach((card, index) => {
+    card.addEventListener("click", function() {
+      const project = projectData[index + 1];
+      if (project) {
+        document.getElementById("detail-title").textContent = project.title;
+        const img = document.getElementById("detail-image");
+const detailImageContainer = document.getElementById("detail-image-container");
+
+if (project.image) {
+  detailImageContainer.innerHTML = `
+    <a href="${project.image}" target="_blank" style="display: inline-block;">
+      <img src="${project.image}" alt="${project.title}" class="zoom-on-hover" style="width: 60%; border-radius: 12px;" />
+    </a>
+  `;
+} else {
+  detailImageContainer.innerHTML = "";
+}
+
+
+        document.getElementById("detail-description").innerHTML = project.description;
+      }
+    });
+  } );
+
+</script>
+<footer style="font-size:14px; color:gray; text-align:center; padding: 5px;">
+  © Shivangi Sarkar • Built with HTML, CSS & JavaScript by me
+</footer>
+</body>
+</html>

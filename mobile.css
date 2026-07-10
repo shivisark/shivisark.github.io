@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+    /* Hide desktop nav */
+    .nav-links {
+      display: none !important;
+    }
+  
+    /* Show hamburger menu icon */
+    .hamburger {
+      display: block;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 1001;
+      text-align: right;
+    }
+  
+    /* Mobile menu layout */
+    .mobile-nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.95);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      text-align: center;
+      padding: 16px 0;
+    }
+  
+    .mobile-nav-links a {
+      color: #1c1c1c;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 12px;
+    }
+  
+    /* Responsive typewriter text */
+    .typewriter {
+      font-size: 24px;
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: break-word;
+      border-right: none;
+    }
+  
+    /* Responsive section spacing */
+    section {
+      max-width: 100% !important;
+      height: auto !important;
+      overflow: visible !important;
+      padding: 60px 16px;
+    }
+  
+    /* About section interest grid fix */
+    .interests-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+  
+    /* Timeline section fix */
+    .journey-timeline {
+      max-width: 90%;
+      height: auto;
+    }
+  
+    /* Image scaling */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Form inputs full width */
+    input, textarea, button {
+      width: 100%;
+    }
+  }
+  
+  /* Hide hamburger and mobile nav on desktop */
+  @media (min-width: 769px) {
+    .hamburger, .mobile-nav-links {
+      display: none !important;
+    }
+  }
+  

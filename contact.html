@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Shivangi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="mobile.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: radial-gradient(ellipse at center, #fbeee8 0%, #f8d9c3 100%);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -3;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+    }
+
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.6;
+      z-index: -2;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .blob1 { width: 400px; height: 400px; background: #fce8ec; top: -100px; left: -100px; }
+    .blob2 { width: 300px; height: 300px; background: #f9f5dc; top: 200px; right: -150px; }
+    .blob3 { width: 500px; height: 500px; background: #e6fff3; bottom: -150px; left: 50%; transform: translateX(-50%); }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-30px) scale(1.05); }
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.4);
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .monogram {
+      font-weight: 500;
+      font-size: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(6px);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      color: #1c1c1c;
+      text-decoration: none;
+      padding: 6px 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    input, textarea {
+      font-size: 16px;
+      padding: 14px 18px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(6px);
+      outline: none;
+      color: #000;
+    }
+
+    button {
+      padding: 14px 18px;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #1c1c1c;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <nav>
+    <a href="index.html" class="monogram">SS</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About</a>
+      <a href="project.html">Projects</a>
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a href="contact">Contact</a>
+      <a href="https://www.linkedin.com/in/shivangi-sarkar/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </nav>
+
+  <section id="contact" data-aos="fade-up">
+    <div class="glass">
+      <h2>Let’s Connect</h2>
+      <p>If you’d like to chat about a project or just say hi, drop a message below.</p>
+      <form action="https://formsubmit.co/ssarka29@asu.edu" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <input type="hidden" name="_subject" value="New Message from Portfolio Site">
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+  <footer style="font-size:14px; color:gray; text-align:center; padding: 60px;">
+    © Shivangi Sarkar • Built with HTML, CSS & JavaScript by me
+  </footer>
+</body>
+</html>
