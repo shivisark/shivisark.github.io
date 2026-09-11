@@ -217,7 +217,13 @@ h1 {
 <div class="projects-container">
   <a href="#slideshow" style="text-decoration: none;">
     <div class="project-card" style="cursor: pointer;">
-      <img src="heatmap.jpg" alt="Project 1" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+      <img src="maude1.png" alt="Project 1" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
+      <h3 style="text-align: center; color: #1c1c1c;">FDA MAUDE Post-Market Surveillance Dashboard on Implanted Infusion Pumps</h3>
+    </div>
+  </a>
+  <a href="#slideshow" style="text-decoration: none;">
+    <div class="project-card" style="cursor: pointer;">
+      <img src="heatmap.jpg" alt="Project 2" style="width: 100%; border-radius: 12px; margin-bottom: 12px;" />
       <h3 style="text-align: center; color: #1c1c1c;">Differential Gene Expression Analysis in Breast Cancer (TCGA-BRCA)</h3>
     </div>
   </a>
@@ -274,7 +280,7 @@ h1 {
 <script>
   const projectData = {
 
-    1: {
+    2: {
   title: "Differential Gene Expression Analysis in Breast Cancer (TCGA-BRCA)",
   image: "heatmap.jpg",
   description: `
@@ -362,7 +368,7 @@ h1 {
 
 ,
     
-    2: {
+    3: {
   title: "Automated DHF Generator for Wearable ECG Patch",
   image: "dhfecg.jpg",
   description: `
@@ -406,7 +412,7 @@ h1 {
   `
 },
 
-    3: {
+    4: {
       title: "Effects of Air Quality on Cognitive and Motor Scores",
       image: "appliedproject.jpg",
       description: `
@@ -468,7 +474,7 @@ h1 {
 </div>
       `
     },
-    4: {
+    5: {
   title: "FlowSync: Personalized Menstrual and Hormonal Health Tracker",
   image: "",
 description: `
@@ -517,7 +523,7 @@ description: `
       </p>
     </div>
   `
-}, 5: {
+}, 6: {
   title: "Heart Disease Prediction Using Machine Learning",
   image: "",
   description: `
@@ -606,7 +612,7 @@ description: `
   </div>
 
   `
-}, 6: {
+}, 7: {
   title: "TBI on a BBB Chip: Investigating Curcumin as a Therapeutic Treatment",
   image: "",
   description: `
@@ -658,7 +664,7 @@ description: `
       </ul>
     </div>
   `
-}, 7: {
+}, 8: {
   title: "Honors Thesis: Socio-Cultural Review of Cancer Across Different Continents",
   image: "",
   description: `
@@ -702,7 +708,7 @@ description: `
 </div>
 
   `
-}, 8: {
+}, 9: {
   title: "Thermoelectric Brain Hypothermia Device",
   image: "",
   description: `
@@ -777,6 +783,67 @@ description: `
         </li>
         <li> Presented at Capstone Symposium with a digital poster and interactive demo, showcasing both virtual simulations and physical test results</li>
       </ul>
+    </div>
+  `
+}, 1: {
+  title: "FDA MAUDE Post-Market Surveillance Dashboard on Implanted Infusion Pumps",
+  image: "",
+  description: `
+    <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+      <div style="flex: 1; min-width: 300px;">
+        <h3>Overview</h3>
+        <p>Developed an interactive Power BI post-market surveillance dashboard to analyze FDA MAUDE adverse-event reports for programmable implanted infusion pumps (Product Code LKK) from approximately 2023–2025. The project transforms raw medical-device event data into a structured quality analytics tool for identifying safety trends, recurring device problems, and potential signals requiring further investigation.</p>
+      </div>
+      <div style="flex: 1; min-width: 300px;">
+        <h3>Tools & Technologies</h3>
+        <ul style="font-size: 15px; line-height: 1.8;">
+          <li>Microsoft Power BI</li>
+          <li>Power Query</li>
+          <li>Data cleaning and transformation</li>
+          <li>Interactive data visualization</li>
+          <li>FDA MAUDE adverse-event data</li>
+          <li>Post-market surveillance and quality analytics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3>Dashboard Pages</h3>
+      <ul style="font-size: 15px; line-height: 1.8; text-align: left; padding-left: 20px;">
+        <li><strong>Executive Quality Overview:</strong> High-level view of adverse-event trends and key quality indicators.</li>
+        <li><strong>Device Failure Analysis:</strong> Analysis of frequently reported device problems and failure patterns.</li>
+        <li><strong>Patient Safety Analysis:</strong> Evaluation of reported patient outcomes, including injury and death events.</li>
+        <li><strong>Trend & CAPA Screening:</strong> Trend analysis designed to identify recurring issues that may warrant further investigation or CAPA evaluation.</li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <h3 style="text-align: center;">Dashboard Preview</h3>
+
+      <div style="margin-top: 20px;">
+        <h3>Executive Quality Overview</h3>
+        <a href="maude1.png" target="_blank" style="display: inline-block;">
+          <img src="maude1.png" alt="Executive Quality Overview" class="zoom-on-hover" style="width: 100%; border-radius: 12px;" />
+        </a>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <h3>Device Failure Analysis</h3>
+        <a href="maude2.png" target="_blank" style="display: inline-block;">
+          <img src="maude2.png" alt="Implanted Infusion Pump Failure Analysis" class="zoom-on-hover" style="width: 100%; border-radius: 12px;" />
+        </a>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <h3>Safety & Trend Analysis</h3>
+        <a href="maude3.png" target="_blank" style="display: inline-block;">
+          <img src="maude3.png" alt="Implanted Infusion Pump Safety & Trend Analysis" class="zoom-on-hover" style="width: 100%; border-radius: 12px;" />
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; font-size: 13px; color: #666;">
+      <p><em>Data source: FDA openFDA MAUDE Device Adverse Event data, Product Code LKK (implanted programmable infusion pumps), reports received 2023–2025. MAUDE reports represent submitted adverse-event reports and should not be interpreted as incidence rates or proof that a device caused an event.</em></p>
     </div>
   `
 }
